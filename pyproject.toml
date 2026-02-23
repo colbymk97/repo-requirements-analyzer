@@ -1,0 +1,26 @@
+[project]
+name = "repo-requirements-analyzer"
+version = "0.1.0"
+description = "Agent that reverse-engineers features and user stories from a codebase"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "openai-agents>=0.8.0",
+]
+
+[project.scripts]
+repo-req-analyzer = "repo_requirements_analyzer.main:entrypoint"
+repo-req-code = "repo_requirements_analyzer.code_agent:entrypoint"
+repo-req-secret-workflow = "repo_requirements_analyzer.secret_sanitization_workflow:entrypoint"
+repo-req-ingest = "repo_requirements_analyzer.ingest:entrypoint"
+repo-req-web = "repo_requirements_analyzer.webapp:entrypoint"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

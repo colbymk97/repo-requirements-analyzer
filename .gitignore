@@ -1,0 +1,38 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.agent-workspace/
+.venv/
+data/*.db
+logs/
+*.log
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+!.env.secret-workflow.example
+*.local
+
+# Keys/certs
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+
+# Python and tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local tool/editor state
+.codex/
+.cursor/
+.gemini/
+.mcp-node/node_modules/
+.vscode/
+.zed/
+
+# OS noise
+.DS_Store

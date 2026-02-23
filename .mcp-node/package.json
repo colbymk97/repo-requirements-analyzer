@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@cyanheads/git-mcp-server": "^2.8.4",
+    "@modelcontextprotocol/server-filesystem": "^2026.1.14"
+  }
+}

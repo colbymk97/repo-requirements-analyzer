@@ -1,0 +1,30 @@
+{
+  "mcpServers": {
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "filesystem": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "./.mcp-node/node_modules/@modelcontextprotocol/server-filesystem/dist/index.js",
+        ".",
+        "./.agent-workspace"
+      ]
+    },
+    "git": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "./.mcp-node/node_modules/@cyanheads/git-mcp-server/dist/index.js"
+      ],
+      "env": {
+        "MCP_TRANSPORT_TYPE": "stdio",
+        "MCP_LOG_LEVEL": "error",
+        "NODE_ENV": "production",
+        "GIT_BASE_DIR": "/Users/colbyking/source/repo-requirements-analyzer"
+      }
+    }
+  }
+}
